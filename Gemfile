@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 gem 'rails', '4.2.4'
-gem 'sqlite3'
+gem 'sqlite3', group: :development
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -15,8 +15,14 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'simple_form'
 
+gem 'rails_12factor', group: :production
+gem 'pg', group: :production
+
+
 
 group :development, :test do
+
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
